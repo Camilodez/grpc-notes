@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package notas;
+
+service NotasService {
+  rpc CalcularNotaFinal(SolicitudNotas) returns (RespuestaNotaFinal) {}
+}
+
+message SolicitudNotas {
+  float nota1 = 1;
+  float porcentaje1 = 2;
+  float nota2 = 3;
+  float porcentaje2 = 4;
+  float nota3 = 5;
+  float porcentaje3 = 6;
+}
+
+message RespuestaNotaFinal {
+  float notaFinal = 1;
+}
